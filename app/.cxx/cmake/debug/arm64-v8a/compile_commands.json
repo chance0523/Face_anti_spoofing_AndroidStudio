@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android_sdk\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android_sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android_sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_lib_EXPORTS -IC:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/opencv/native/jni/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security   -std=gnu++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\native-lib.dir\\native-lib.cpp.o -c C:\\Users\\user\\AndroidStudioProjects\\UseOpenCVwithCMake\\app\\src\\main\\cpp\\native-lib.cpp",
+  "file": "C:\\Users\\user\\AndroidStudioProjects\\UseOpenCVwithCMake\\app\\src\\main\\cpp\\native-lib.cpp"
+}
+]

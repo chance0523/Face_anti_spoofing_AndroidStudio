@@ -1,0 +1,40 @@
+ninja: Entering directory `C:\Users\user\AndroidStudioProjects\UseOpenCVwithCMake\app\.cxx\cmake\debug\armeabi-v7a'
+[1/2] Building CXX object CMakeFiles/native-lib.dir/native-lib.cpp.o
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:340:35: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
+                if (denomi_y == 0)hist_y[59] = {0,};
+                                  ^      ~~
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:290:17: note: array 'hist_y' declared here
+                float hist_y[59] = {0,};
+                ^
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:341:36: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
+                if (denomi_cr == 0)hist_cr[59] = {0,};
+                                   ^       ~~
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:291:17: note: array 'hist_cr' declared here
+                float hist_cr[59] = {0,};
+                ^
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:342:36: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
+                if (denomi_cb == 0)hist_cb[59] = {0,};
+                                   ^       ~~
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:292:17: note: array 'hist_cb' declared here
+                float hist_cb[59] = {0,};
+                ^
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:343:35: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
+                if (denomi_h == 0)hist_h[59] = {0,};
+                                  ^      ~~
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:293:17: note: array 'hist_h' declared here
+                float hist_h[59] = {0,};
+                ^
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:344:35: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
+                if (denomi_s == 0)hist_s[59] = {0,};
+                                  ^      ~~
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:294:17: note: array 'hist_s' declared here
+                float hist_s[59] = {0,};
+                ^
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:345:35: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
+                if (denomi_v == 0)hist_v[59] = {0,};
+                                  ^      ~~
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:295:17: note: array 'hist_v' declared here
+                float hist_v[59] = {0,};
+                ^
+6 warnings generated.
+[2/2] Linking CXX shared library C:\Users\user\AndroidStudioProjects\UseOpenCVwithCMake\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libnative-lib.so
