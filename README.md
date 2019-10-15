@@ -1,1 +1,0 @@
-# Face_anti_spoofing_AndroidStudio
