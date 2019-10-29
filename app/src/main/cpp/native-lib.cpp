@@ -242,22 +242,18 @@ Java_com_chance_useopencvwithcmake_MainActivity_detect(JNIEnv *env, jobject inst
         Mat frame_v_lbp = u_lbp(frame_v);
 
         //////////////////////////////////////
-        //           merge                 //
+        //           plot                  //
         ////////////////////////////////////
-        resize(frame_cr_lbp, frame_y_lbp_resize, Size(64, 64), 0, 0, INTER_AREA);
-        merge_mat[0] = frame_y_lbp_resize;
-        merge_mat[1] = frame_y_lbp_resize;
-        merge_mat[2] = frame_y_lbp_resize;
-        merge(merge_mat, y_merge);
-        //cvtColor(frame_y_lbp_resize,frame_y_lbp_resize,COLOR_)
-        Rect area = Rect(img_input.cols*0.5, img_input.rows*0.1, frame_y_lbp_resize.cols, frame_y_lbp_resize.rows);
-        Rect frameRect = Rect(0, 0, img_input.cols, img_input.rows);
+        resize(frame_y_lbp, frame_y_lbp_resize, Size(256, 256), 0, 0, INTER_AREA);
 
-        area &= frameRect;
+        for (int y=0;y<frame_y_lbp_resize.rows;y++){
+            for (int x=0;x<frame_y_lbp_resize.cols;x++){
+                uchar b=frame_y_lbp_resize.at<uchar>(y,x);
 
-        //y_merge.copyTo(img_result(area));
+                img_result.at<Vec3b>(15+y,15+x)=b;
+            }
+        }
 
-        //frame_y_lbp_resize.copyTo(img_result(area));
 
 
         /*
