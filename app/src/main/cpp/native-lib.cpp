@@ -166,6 +166,9 @@ Java_com_chance_useopencvwithcmake_MainActivity_detect(JNIEnv *env, jobject inst
     Mat frame_split_hsv[3];
     vector<Mat>merge_mat(3);
 
+    Mat image_resize_plot;
+    Mat plot_ycbcr;
+    Mat plot_split[3];
     Mat frame_y_lbp_resize;
 
     float response;
@@ -197,11 +200,15 @@ Java_com_chance_useopencvwithcmake_MainActivity_detect(JNIEnv *env, jobject inst
         rectangle(img_result, pt1, pt2, Scalar(0, 255, 0), 3, 4, 0);
 
         frame_roi = img_input(Rect(face[0].x, face[0].y, face[0].width, face[0].height));
+
+
         //cvtColor(frame_roi,frame_roi,COLOR_BGR2GRAY);
 
         /* ROI */
-        Rect rect(frame_roi.cols*0.12, frame_roi.rows*0.15, frame_roi.cols*0.73, frame_roi.rows*0.85);
+        Rect rect(int(frame_roi.cols*0.12), int(frame_roi.rows*0.15), int(frame_roi.cols*0.73), int(frame_roi.rows*0.85));
         image_resize = frame_roi(rect);
+        image_resize_plot=image_resize.clone();
+        resize(image_resize_plot,image_resize_plot,Size(256,256),0,0,INTER_AREA);
 
 
         /* resize image */
@@ -244,7 +251,32 @@ Java_com_chance_useopencvwithcmake_MainActivity_detect(JNIEnv *env, jobject inst
         //////////////////////////////////////
         //           plot                  //
         ////////////////////////////////////
-        resize(frame_y_lbp, frame_y_lbp_resize, Size(256, 256), 0, 0, INTER_AREA);
+        cvtColor(image_resize_plot, plot_ycbcr, COLOR_BGR2YCrCb);
+        split(plot_ycbcr, plot_split);
+        Mat plot_y = plot_split[0];
+        Mat plot_cr = plot_split[1];
+        Mat plot_cb = plot_split[2];
+        Mat plot_lbp_y = u_lbp(plot_y);
+        Mat plot_lbp_cr = u_lbp(plot_cr);
+        Mat plot_lbp_cb = u_lbp(plot_cb);
+
+
+        Mat for_gray;
+        //for_gray=img_result(Rect(15,15,plot_lbp_y.cols,plot_lbp_y.rows));
+        //cvtColor(for_gray,for_gray,COLOR_BGR2GRAY);
+        //resize(plot_lbp_y,frame_y_lbp_resize,Size(256,256),0,0,INTER_AREA);
+        for (int y=0;y<plot_lbp_y.rows;y++){
+            for (int x=0;x<plot_lbp_y.cols;x++){
+                uchar b=plot_lbp_y.at<uchar>(y,x);
+
+                img_result.at<Vec3b>(15+y,15+x)[0]=b;
+                img_result.at<Vec3b>(15+y,15+x)[1]=b;
+                img_result.at<Vec3b>(15+y,15+x)[2]=b;
+                //img_result.at<uchar>(15+y,15+x)=b;
+            }
+        }
+
+        /*resize(frame_y_lbp, frame_y_lbp_resize, Size(256, 256), 0, 0, INTER_AREA);
 
         for (int y=0;y<frame_y_lbp_resize.rows;y++){
             for (int x=0;x<frame_y_lbp_resize.cols;x++){
@@ -253,7 +285,7 @@ Java_com_chance_useopencvwithcmake_MainActivity_detect(JNIEnv *env, jobject inst
                 img_result.at<Vec3b>(15+y,15+x)=b;
             }
         }
-
+        */
 
 
         /*
@@ -366,7 +398,7 @@ Java_com_chance_useopencvwithcmake_MainActivity_detect(JNIEnv *env, jobject inst
 
        response = response2;
 
-        //img_result&=frame_y_lbp;
+
     }
     else response = 0;
 
