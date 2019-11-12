@@ -117,9 +117,9 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void read_SVM_file(){
-        copyFile("ycbcrhsvre.xml");
+        copyFile("re2.xml");
         Log.d(TAG,"read_SVM_file:");
-        CloadSVM("ycbcrhsvre.xml");
+        CloadSVM("re2.xml");
     }
 
 
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void loadSVM() {
-        File left = moveResource(R.raw.ycbcrhsvre, "files", "raw/ycbcrhsvre.xml");
+        File left = moveResource(R.raw.ycbcrhsvre, "files", "raw/re2.xml");
         //CloadSVM(left.getAbsolutePath());
     }
 
@@ -301,12 +301,7 @@ public class MainActivity extends AppCompatActivity
 
             matResult = new Mat(matInput.rows(), matInput.cols(), matInput.type());
 
-        /*
-        if (matMerge==null)
 
-            matMerge=new Mat(64,64,matInput.type());
-        */
-        //ConvertRGBtoGray(matInput.getNativeObjAddr(), matResult.getNativeObjAddr());
 
         Core.flip(matInput, matInput, 1);
 
@@ -323,7 +318,7 @@ public class MainActivity extends AppCompatActivity
             else if (response == 0) textview.setText("");
             else textview.setText("not sure");
             */
-
+            /*
         if (cnt_r+cnt_f==10){
             if (cnt_r>cnt_f){
                 textview.setText("real");
@@ -340,20 +335,39 @@ public class MainActivity extends AppCompatActivity
         }
         else{
             if (response>0){
-                //textview.setText("fake++");
                 cnt_f++;
             }
             else if(response<0){
-                //textview.setText("real++");
                 cnt_r++;
             }
             else{
-                //textview.setText("nothing++");
                 cnt_nothing++;
             }
         }
-
-
+    */  if (response>0.7){
+                textview.setText("over 0.7");
+            }
+        else if (response>0.5){
+                textview.setText("over 0.5");
+            }
+        else if (response>0.3){
+            textview.setText("over 0.3");
+        }
+        else if (response>0){
+            textview.setText("over 0");
+        }
+         else if (response<-0.7){
+            textview.setText("under -0.7");
+         }
+         else if (response<-0.5){
+             textview.setText("under -0.5");
+         }
+         else if (response<-0.3){
+            textview.setText("under -0.3");
+         }
+         else if (response<0){
+             textview.setText("under 0");
+         }
 
         } catch (InterruptedException e) {
             e.printStackTrace();

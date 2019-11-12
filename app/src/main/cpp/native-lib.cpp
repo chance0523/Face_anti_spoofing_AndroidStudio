@@ -202,17 +202,17 @@ Java_com_chance_useopencvwithcmake_MainActivity_detect(JNIEnv *env, jobject inst
         frame_roi = img_input(Rect(face[0].x, face[0].y, face[0].width, face[0].height));
 
 
-        //cvtColor(frame_roi,frame_roi,COLOR_BGR2GRAY);
 
         /* ROI */
         Rect rect(int(frame_roi.cols*0.12), int(frame_roi.rows*0.15), int(frame_roi.cols*0.73), int(frame_roi.rows*0.85));
         image_resize = frame_roi(rect);
+
         image_resize_plot=image_resize.clone();
         resize(image_resize_plot,image_resize_plot,Size(256,256),0,0,INTER_AREA);
 
 
         /* resize image */
-        if (frame_roi.rows > 64 && frame_roi.cols > 64)
+        if (image_resize.rows > 64 && image_resize.cols > 64)
         {
             resize(image_resize, image_resize, Size(64, 64), 0, 0, INTER_AREA);
         }

@@ -1,39 +1,39 @@
 ninja: Entering directory `C:\Users\user\AndroidStudioProjects\UseOpenCVwithCMake\app\.cxx\cmake\debug\x86'
 [1/2] Building CXX object CMakeFiles/native-lib.dir/native-lib.cpp.o
-C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:336:35: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:368:35: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
                 if (denomi_y == 0)hist_y[59] = {0,};
                                   ^      ~~
-C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:286:17: note: array 'hist_y' declared here
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:318:17: note: array 'hist_y' declared here
                 float hist_y[59] = {0,};
                 ^
-C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:337:36: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:369:36: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
                 if (denomi_cr == 0)hist_cr[59] = {0,};
                                    ^       ~~
-C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:287:17: note: array 'hist_cr' declared here
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:319:17: note: array 'hist_cr' declared here
                 float hist_cr[59] = {0,};
                 ^
-C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:338:36: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:370:36: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
                 if (denomi_cb == 0)hist_cb[59] = {0,};
                                    ^       ~~
-C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:288:17: note: array 'hist_cb' declared here
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:320:17: note: array 'hist_cb' declared here
                 float hist_cb[59] = {0,};
                 ^
-C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:339:35: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:371:35: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
                 if (denomi_h == 0)hist_h[59] = {0,};
                                   ^      ~~
-C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:289:17: note: array 'hist_h' declared here
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:321:17: note: array 'hist_h' declared here
                 float hist_h[59] = {0,};
                 ^
-C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:340:35: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:372:35: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
                 if (denomi_s == 0)hist_s[59] = {0,};
                                   ^      ~~
-C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:290:17: note: array 'hist_s' declared here
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:322:17: note: array 'hist_s' declared here
                 float hist_s[59] = {0,};
                 ^
-C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:341:35: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:373:35: warning: array index 59 is past the end of the array (which contains 59 elements) [-Warray-bounds]
                 if (denomi_v == 0)hist_v[59] = {0,};
                                   ^      ~~
-C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:291:17: note: array 'hist_v' declared here
+C:/Users/user/AndroidStudioProjects/UseOpenCVwithCMake/app/src/main/cpp/native-lib.cpp:323:17: note: array 'hist_v' declared here
                 float hist_v[59] = {0,};
                 ^
 6 warnings generated.
