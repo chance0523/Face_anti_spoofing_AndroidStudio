@@ -190,6 +190,8 @@ Java_com_chance_useopencvwithcmake_MainActivity_detect(JNIEnv *env, jobject inst
     int he=320;
 
 
+    int rere;
+
     ((CascadeClassifier *) cascadeClassifier_face)->detectMultiScale(img_gray, face, 1.1, 2,
                                                                      0 | CASCADE_SCALE_IMAGE,
                                                                      Size(70, 70));
@@ -397,7 +399,6 @@ Java_com_chance_useopencvwithcmake_MainActivity_detect(JNIEnv *env, jobject inst
 
 
        response = response2;
-
 
     }
     else response = 0;

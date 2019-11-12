@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity
             //, long matAddrMerge
     );
     public long cascadeClassifier_face = 0;
-    public float response=3;
+    public float response;
+    //public float response=3;
     private final Semaphore writeLock = new Semaphore(1);
 
     public int cnt_r=0;
@@ -171,7 +172,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void loadSVM() {
-        File left = moveResource(R.raw.ycbcrhsvre, "files", "raw/re2.xml");
+        File left = moveResource(R.raw.re2, "files", "raw/re2.xml");
         //CloadSVM(left.getAbsolutePath());
     }
 
@@ -344,7 +345,8 @@ public class MainActivity extends AppCompatActivity
                 cnt_nothing++;
             }
         }
-    */  if (response>0.7){
+    */
+            if (response>0.7){
                 textview.setText("over 0.7");
             }
         else if (response>0.5){
